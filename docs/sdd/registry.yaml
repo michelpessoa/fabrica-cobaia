@@ -71,3 +71,43 @@ documents:
     relates_to: []
     path: "docs/sdd/SDD-COBAIA-0007.md"
     tags: [cobaia]
+  - id: SDD-COBAIA-0008
+    type: SDD
+    title: "Limite de retirada por item"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0008.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0009
+    type: SDD
+    title: "Validar token de reposição"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0009.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0010
+    type: SDD
+    title: "Nome normalizado de item"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0010.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0011
+    type: SDD
+    title: "Soma de limites"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0011.md"
+    tags: [cobaia]
