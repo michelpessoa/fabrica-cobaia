@@ -1,0 +1,33 @@
+project: "COBAIA"
+framework_version: "2.3.2"
+documents:
+  - id: SDD-COBAIA-0001
+    type: SDD
+    title: "Retirada de itens do estoque"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0001.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0002
+    type: SDD
+    title: "Alerta de estoque baixo"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0002.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0003
+    type: SDD
+    title: "SDD com dúvida pendente"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0003.md"
+    tags: [cobaia]
