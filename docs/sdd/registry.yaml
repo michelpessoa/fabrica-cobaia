@@ -79,7 +79,8 @@ documents:
     created: "2026-11-05"
     updated: "2026-11-05"
     relates_to: []
-    path: "docs/sdd/SDD-COBAIA-0008.md"
+    path: "docs/sdd/arquivo/SDD-COBAIA-0008.md"
+    entrega: {pr: 8, data: "2026-11-05", resultado: aprovado}
     tags: [cobaia]
   - id: SDD-COBAIA-0009
     type: SDD
