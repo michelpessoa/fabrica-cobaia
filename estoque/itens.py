@@ -1,3 +1,7 @@
+class EstoqueInsuficiente(Exception):
+    pass
+
+
 class Estoque:
     def __init__(self):
         self._saldos = {}
@@ -9,3 +13,8 @@ class Estoque:
 
     def saldo(self, nome):
         return self._saldos.get(nome, 0)
+
+    def retirar(self, nome, quantidade):
+        if quantidade > self.saldo(nome):
+            raise EstoqueInsuficiente(nome)
+        self._saldos[nome] = self.saldo(nome) - quantidade
