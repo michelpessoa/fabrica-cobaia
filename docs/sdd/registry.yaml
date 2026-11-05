@@ -107,7 +107,7 @@ documents:
   - id: SDD-COBAIA-0011
     type: SDD
     title: "Soma de limites"
-    status: approved
+    status: implemented
     owner: "Michel Pessoa"
     created: "2026-11-05"
     updated: "2026-11-05"
