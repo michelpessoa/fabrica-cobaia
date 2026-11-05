@@ -2,7 +2,7 @@
 id: SDD-COBAIA-0011
 type: SDD
 title: "Soma de limites"
-status: approved
+status: implemented
 project: "COBAIA"
 owner: "Michel Pessoa"
 created: "2026-11-05"
@@ -49,16 +49,20 @@ Toque só nos arquivos listados. Testes na classe `TestSomaLimites`.
 
 ## Verificação de escopo (nada a mais, nada a menos)
 
-- [ ] Todo requisito consolidado acima tem código correspondente.
-- [ ] Todo arquivo tocado aparece nesta SDD.
-- [ ] Nenhuma abstração, config, feature flag ou refactor extra.
+- [x] Todo requisito consolidado acima tem código correspondente.
+- [x] Todo arquivo tocado aparece nesta SDD.
+- [x] Nenhuma abstração, config, feature flag ou refactor extra.
 
 ## Evidência de verificação (preencher antes de status `implemented`)
+
+Verificação independente em `validation-SDD-COBAIA-0011.md`. Veredito: **PASS**.
 
 **Verificador independente:** sim
 
 | # | Comando rodado | Saída (resumo) | Sensor | Passou? | Assertion (file:line) | Perfil usado |
 |---|---|---|---|---|---|---|
+| 1 | `python3 -m unittest tests.test_soma_limites -v` | Ran 10 tests in 0.000s OK EXIT 0 | Mutação 1: estoque/soma_limites.py:3 trocado por int(sum(valores[1:])) -> FAILED (failures=7). Mutação 2: devolver None para lista vazia -> FAIL test_lista_vazia (failures=1). Restaurado com git checkout, volta para OK. | Sim | tests/test_soma_limites.py:9 | automatizado |
+| 2 | `python3 -m unittest discover -s tests -v` | Ran 67 tests in 0.003s OK EXIT 0 | Mutação int(sum(valores[1:])) em estoque/soma_limites.py:3 -> discover FAILED (failures=7); restaurado, volta para OK. | Sim | tests/test_soma_limites.py:20 | automatizado |
 
 ## Rastreabilidade
 
