@@ -31,3 +31,43 @@ documents:
     relates_to: []
     path: "docs/sdd/SDD-COBAIA-0003.md"
     tags: [cobaia]
+  - id: SDD-COBAIA-0004
+    type: SDD
+    title: "Consulta de itens zerados"
+    status: implemented
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0004.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0005
+    type: SDD
+    title: "Saldo total do estoque"
+    status: implemented
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0005.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0006
+    type: SDD
+    title: "Prioridade de reposição"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0006.md"
+    tags: [cobaia]
+  - id: SDD-COBAIA-0007
+    type: SDD
+    title: "Itens com saldo"
+    status: implemented
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0007.md"
+    tags: [cobaia]
