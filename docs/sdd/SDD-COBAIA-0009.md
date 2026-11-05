@@ -2,7 +2,7 @@
 id: SDD-COBAIA-0009
 type: SDD
 title: "Validar token de reposição"
-status: approved
+status: implemented
 project: "COBAIA"
 owner: "Michel Pessoa"
 created: "2026-11-05"
@@ -49,16 +49,20 @@ Toque só nos arquivos listados. Testes na classe `TestToken`.
 
 ## Verificação de escopo (nada a mais, nada a menos)
 
-- [ ] Todo requisito consolidado acima tem código correspondente.
-- [ ] Todo arquivo tocado aparece nesta SDD.
-- [ ] Nenhuma abstração, config, feature flag ou refactor extra.
+- [x] Todo requisito consolidado acima tem código correspondente.
+- [x] Todo arquivo tocado aparece nesta SDD.
+- [x] Nenhuma abstração, config, feature flag ou refactor extra.
 
 ## Evidência de verificação (preencher antes de status `implemented`)
+
+Verificação independente em `validation-SDD-COBAIA-0009.md`. Veredito: **PASS**.
 
 **Verificador independente:** sim
 
 | # | Comando rodado | Saída (resumo) | Sensor | Passou? | Assertion (file:line) | Perfil usado |
 |---|---|---|---|---|---|---|
+| 1 | `python3 -m unittest tests.test_reposicao -v` | Ran 12 tests in 0.001s OK (exit 0) | Mutações em estoque/reposicao.py: 'or'->'and' na checagem de vazio => FAILED (failures=1); remover checagem de vazio (if False) => FAILED (failures=2); trocar compare_digest por '==' => FAILED (failures=2); negar compare_digest => FAILED (failures=7). Restaurado com git checkout, volta a OK. | Sim | tests/test_reposicao.py:9 | automatizado |
+| 2 | `python3 -m unittest discover -s tests -v` | Ran 57 tests in 0.003s OK (exit 0) | Regressão: a suíte inclui tests/test_reposicao.py, que falhou sob as mesmas mutações do critério 1; restaurado e verde. | Sim | tests/test_reposicao.py:9 | automatizado |
 
 ## Rastreabilidade
 
