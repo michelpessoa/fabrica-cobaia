@@ -2,7 +2,7 @@
 id: SDD-COBAIA-0008
 type: SDD
 title: "Limite de retirada por item"
-status: approved
+status: implemented
 project: "COBAIA"
 owner: "Michel Pessoa"
 created: "2026-11-05"
@@ -50,16 +50,20 @@ Toque só nos arquivos listados. Testes na classe `TestLimites`.
 
 ## Verificação de escopo (nada a mais, nada a menos)
 
-- [ ] Todo requisito consolidado acima tem código correspondente.
-- [ ] Todo arquivo tocado aparece nesta SDD.
-- [ ] Nenhuma abstração, config, feature flag ou refactor extra.
+- [x] Todo requisito consolidado acima tem código correspondente.
+- [x] Todo arquivo tocado aparece nesta SDD.
+- [x] Nenhuma abstração, config, feature flag ou refactor extra.
 
 ## Evidência de verificação (preencher antes de status `implemented`)
+
+Verificação independente em `validation-SDD-COBAIA-0008.md`. Veredito: **PASS**.
 
 **Verificador independente:** sim
 
 | # | Comando rodado | Saída (resumo) | Sensor | Passou? | Assertion (file:line) | Perfil usado |
 |---|---|---|---|---|---|---|
+| 1 | `python3 -m unittest tests.test_limites -v` | Ran 14 tests in 0.001s OK (exit 0) | Mutações em estoque/limites.py, cada uma restaurada com git checkout: 'limite <= 0' -> 'limite < 0' => FAILED (failures=2); validação removida (if False) => FAILED (failures=3); 'quantidade <= limite' -> '<' => FAILED (failures=5); item sem limite devolve False => FAILED (failures=5); não guardar limite => FAILED (failures=5); pode_retirar sempre True => FAILED (failures=5). Depois de restaurar, v | Sim | tests/test_limites.py:21 | automatizado |
+| 2 | `python3 -m unittest discover -s tests -v` | Ran 34 tests in 0.001s OK (exit 0) | Regressão: as mesmas mutações de estoque/limites.py fazem a suíte falhar pelos testes de TestLimites. Depois de restaurar (git status limpo), a suíte completa volta a OK. | Sim | tests/test_limites.py:43 | automatizado |
 
 ## Rastreabilidade
 
