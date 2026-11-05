@@ -44,7 +44,7 @@ documents:
   - id: SDD-COBAIA-0005
     type: SDD
     title: "Saldo total do estoque"
-    status: approved
+    status: implemented
     owner: "Michel Pessoa"
     created: "2026-11-05"
     updated: "2026-11-05"
