@@ -112,5 +112,6 @@ documents:
     created: "2026-11-05"
     updated: "2026-11-05"
     relates_to: []
-    path: "docs/sdd/SDD-COBAIA-0011.md"
+    path: "docs/sdd/arquivo/SDD-COBAIA-0011.md"
+    entrega: {pr: 15, data: "2026-11-05", resultado: aprovado}
     tags: [cobaia]
