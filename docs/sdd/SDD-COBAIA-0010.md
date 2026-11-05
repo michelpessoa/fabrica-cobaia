@@ -2,7 +2,7 @@
 id: SDD-COBAIA-0010
 type: SDD
 title: "Nome normalizado de item"
-status: approved
+status: implemented
 project: "COBAIA"
 owner: "Michel Pessoa"
 created: "2026-11-05"
@@ -48,16 +48,20 @@ Toque só nos arquivos listados. Testes na classe `TestNormalizar`.
 
 ## Verificação de escopo (nada a mais, nada a menos)
 
-- [ ] Todo requisito consolidado acima tem código correspondente.
-- [ ] Todo arquivo tocado aparece nesta SDD.
-- [ ] Nenhuma abstração, config, feature flag ou refactor extra.
+- [x] Todo requisito consolidado acima tem código correspondente.
+- [x] Todo arquivo tocado aparece nesta SDD.
+- [x] Nenhuma abstração, config, feature flag ou refactor extra.
 
 ## Evidência de verificação (preencher antes de status `implemented`)
+
+Verificação independente em `validation-SDD-COBAIA-0010.md`. Veredito: **PASS**.
 
 **Verificador independente:** sim
 
 | # | Comando rodado | Saída (resumo) | Sensor | Passou? | Assertion (file:line) | Perfil usado |
 |---|---|---|---|---|---|---|
+| 1 | `python3 -m unittest tests.test_nomes -v` | Ran 11 tests in 0.000s OK EXIT=0 | Removido .strip() em estoque/nomes.py:2 -> FAILED (failures=6); removido .lower() -> FAILED (failures=6); restaurado com git checkout, voltou a OK | Sim | tests/test_nomes.py:8 | automatizado |
+| 2 | `python3 -m unittest discover -s tests -v` | Ran 45 tests in 0.002s OK EXIT=0 | Mutação em estoque/nomes.py:2 (trunca último caractere do resultado) -> suíte completa FAILED (failures=8); restaurado com git checkout, 45 testes OK | Sim | tests/test_nomes.py:11 | automatizado |
 
 ## Rastreabilidade
 

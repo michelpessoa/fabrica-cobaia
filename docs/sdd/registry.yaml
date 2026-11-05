@@ -95,7 +95,7 @@ documents:
   - id: SDD-COBAIA-0010
     type: SDD
     title: "Nome normalizado de item"
-    status: approved
+    status: implemented
     owner: "Michel Pessoa"
     created: "2026-11-05"
     updated: "2026-11-05"
