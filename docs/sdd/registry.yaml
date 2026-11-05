@@ -61,3 +61,13 @@ documents:
     relates_to: []
     path: "docs/sdd/SDD-COBAIA-0006.md"
     tags: [cobaia]
+  - id: SDD-COBAIA-0007
+    type: SDD
+    title: "Itens com saldo"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-05"
+    updated: "2026-11-05"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0007.md"
+    tags: [cobaia]
