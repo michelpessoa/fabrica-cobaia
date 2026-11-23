@@ -115,3 +115,13 @@ documents:
     path: "docs/sdd/arquivo/SDD-COBAIA-0011.md"
     entrega: {pr: 15, data: "2026-11-05", resultado: aprovado}
     tags: [cobaia]
+  - id: SDD-COBAIA-0012
+    type: SDD
+    title: "Mínimos de estoque com reposição sugerida e persistência em JSON"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-23"
+    updated: "2026-11-23"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0012.md"
+    tags: [fabrica-descoberta]
