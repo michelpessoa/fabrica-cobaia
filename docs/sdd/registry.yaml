@@ -125,3 +125,13 @@ documents:
     relates_to: []
     path: "docs/sdd/SDD-COBAIA-0012.md"
     tags: [fabrica-descoberta]
+  - id: SDD-COBAIA-0013
+    type: SDD
+    title: "Histórico de movimentações de estoque e consultas de saldo calculadas a partir dele"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-23"
+    updated: "2026-11-23"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0013.md"
+    tags: [fabrica-descoberta]
