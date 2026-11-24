@@ -1,5 +1,5 @@
 project: "COBAIA"
-framework_version: "2.3.2"
+framework_version: "2.8.0"
 documents:
   - id: SDD-COBAIA-0001
     type: SDD
@@ -115,3 +115,24 @@ documents:
     path: "docs/sdd/arquivo/SDD-COBAIA-0011.md"
     entrega: {pr: 15, data: "2026-11-05", resultado: aprovado}
     tags: [cobaia]
+  - id: SDD-COBAIA-0012
+    type: SDD
+    title: "Mínimos de estoque com reposição sugerida e persistência em JSON"
+    status: approved
+    owner: "Michel Pessoa"
+    created: "2026-11-23"
+    updated: "2026-11-23"
+    relates_to: []
+    path: "docs/sdd/SDD-COBAIA-0012.md"
+    tags: [fabrica-descoberta]
+  - id: SDD-COBAIA-0013
+    type: SDD
+    title: "Histórico de movimentações de estoque e consultas de saldo calculadas a partir dele"
+    status: implemented
+    owner: "Michel Pessoa"
+    created: "2026-11-23"
+    updated: "2026-11-23"
+    relates_to: []
+    path: "docs/sdd/arquivo/SDD-COBAIA-0013.md"
+    entrega: {pr: 20, data: "2026-11-24", resultado: aprovado}
+    tags: [fabrica-descoberta]
