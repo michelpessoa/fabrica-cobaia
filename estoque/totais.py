@@ -1,2 +1,6 @@
-def saldo_total(estoque, nomes):
-    return sum(estoque.saldo(nome) for nome in nomes)
+from estoque.movimentacoes import saldo_por_item
+
+
+def saldo_total(historico, nomes):
+    saldos = saldo_por_item(historico)
+    return sum(saldos.get(nome, 0) for nome in nomes)

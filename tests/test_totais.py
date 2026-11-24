@@ -1,32 +1,37 @@
+import datetime
 import unittest
 
-from estoque.itens import Estoque
+from estoque.movimentacoes import registrar_entrada, registrar_saida
 from estoque.totais import saldo_total
+
+D = datetime.date(2026, 1, 1)
 
 
 class TestSaldoTotal(unittest.TestCase):
     def setUp(self):
-        self.e = Estoque()
-        self.e.adicionar("a", 3)
-        self.e.adicionar("b", 5)
-        self.e.adicionar("c", 7)
+        self.h = []
+        registrar_entrada(self.h, "a", 3, D)
+        registrar_entrada(self.h, "b", 5, D)
+        registrar_entrada(self.h, "c", 7, D)
 
     def test_soma_varios(self):
-        self.assertEqual(saldo_total(self.e, ["a", "b", "c"]), 15)
+        self.assertEqual(saldo_total(self.h, ["a", "b", "c"]), 15)
 
     def test_soma_subconjunto(self):
-        self.assertEqual(saldo_total(self.e, ["a", "c"]), 10)
+        self.assertEqual(saldo_total(self.h, ["a", "c"]), 10)
 
-    def test_um_item(self):
-        self.assertEqual(saldo_total(self.e, ["b"]), 5)
+    def test_com_saida(self):
+        registrar_saida(self.h, "b", 2, D)
+        self.assertEqual(saldo_total(self.h, ["a", "b"]), 6)
 
-    def test_item_inexistente_vale_zero(self):
-        self.assertEqual(saldo_total(self.e, ["a", "x"]), 3)
+    def test_item_sem_movimentacao_vale_zero(self):
+        self.assertEqual(saldo_total(self.h, ["a", "x"]), 3)
 
     def test_lista_vazia(self):
-        self.assertEqual(saldo_total(self.e, []), 0)
-        self.assertEqual(saldo_total(Estoque(), []), 0)
+        self.assertEqual(saldo_total(self.h, []), 0)
+        self.assertEqual(saldo_total([], []), 0)
+        self.assertEqual(saldo_total([], ["a"]), 0)
 
     def test_retorna_inteiro(self):
-        self.assertIsInstance(saldo_total(self.e, ["a"]), int)
-        self.assertIsInstance(saldo_total(self.e, []), int)
+        self.assertIsInstance(saldo_total(self.h, ["a"]), int)
+        self.assertIsInstance(saldo_total(self.h, []), int)
