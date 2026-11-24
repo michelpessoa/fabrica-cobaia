@@ -133,5 +133,6 @@ documents:
     created: "2026-11-23"
     updated: "2026-11-23"
     relates_to: []
-    path: "docs/sdd/SDD-COBAIA-0013.md"
+    path: "docs/sdd/arquivo/SDD-COBAIA-0013.md"
+    entrega: {pr: 20, data: "2026-11-24", resultado: aprovado}
     tags: [fabrica-descoberta]
